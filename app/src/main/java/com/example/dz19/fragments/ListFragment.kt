@@ -67,7 +67,6 @@ class ListFragment : Fragment(), ClickOnItem {
 
                 adapter.getListItem().apply {
                     viewModel.delete(this[position] as TaskEntity)
-                    removeAt(position)
                 }
                 adapter.notifyItemRemoved(position)
                 Toast.makeText(requireContext(), "Удалено", Toast.LENGTH_SHORT).show()
